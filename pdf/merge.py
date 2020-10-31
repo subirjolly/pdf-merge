@@ -1,4 +1,5 @@
-import pyPdf
+from PyPDF2 import PdfFileMerger
+import os
 from argparse import ArgumentParser
 
 
@@ -22,12 +23,13 @@ def append_page(in_file, out_file):
 
 
 def merge(args):
-    out_file = pyPdf.PdfFileWriter()
-
+    merger = PdfFileMerger()
     for f in args.files:
-        append_page(pyPdf.PdfFileReader(open(f, 'rb')), out_file)
+        merger.append(f)
 
-    out_file.write(open(args.destination, "wb"))
+    merger.write(args.destination)
+    merger.close()
+    print('Merged into: {0}'.format(args.destination))
 
 
 def validate_args(args):
