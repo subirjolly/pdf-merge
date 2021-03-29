@@ -11,7 +11,8 @@ setup(
     packages=find_packages(exclude=["tests*"]),
     entry_points={
         'console_scripts': [
-            'merge_pdf=pdf.merge:main'
+            'pdf_merge=pdf.merge:main',
+            'pdf_rotate=pdf.rotate:main'
         ]
     },
 )
