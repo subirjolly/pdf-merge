@@ -12,7 +12,8 @@ setup(
     entry_points={
         'console_scripts': [
             'pdf_merge=pdf.merge:main',
-            'pdf_rotate=pdf.rotate:main'
+            'pdf_rotate=pdf.rotate:main',
+            'pdf_extract=pdf.extract:main'
         ]
     },
 )
