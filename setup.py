@@ -11,9 +11,10 @@ setup(
     packages=find_packages(exclude=["tests*"]),
     entry_points={
         'console_scripts': [
+            'pdf_compress=pdf.compressor:main',
+            'pdf_extract=pdf.extract:main',
             'pdf_merge=pdf.merge:main',
-            'pdf_rotate=pdf.rotate:main',
-            'pdf_extract=pdf.extract:main'
+            'pdf_rotate=pdf.rotate:main'
         ]
     },
 )

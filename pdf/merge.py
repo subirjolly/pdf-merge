@@ -23,11 +23,11 @@ def append_page(in_file, out_file):
 
 
 def merge(args):
-    merger = PdfFileMerger()
+    merger = PdfFileMerger(strict=False)
     for f in args.files:
         merger.append(f)
 
-    merger.write(args.destination)
+    merger.write(open(args.destination, 'wb'))
     merger.close()
     print('Merged into: {0}'.format(args.destination))
 

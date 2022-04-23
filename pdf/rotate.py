@@ -8,7 +8,7 @@ def parse_args():
     parser = ArgumentParser()
     parser.add_argument(
         '-i', '--input', action='store',
-        required=True, dest='file', help='Input files.')
+        required=True, dest='file', help='Input file.')
     parser.add_argument(
         '-d', '--degree', action='store',
         required=True, dest='degree', help='Rotation degree. Default is 90.',
